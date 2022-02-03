@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models_X\**" />
+    <Compile Remove="Model\**" />
+    <EmbeddedResource Remove="Models_X\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <None Remove="Models_X\**" />
+    <None Remove="Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Contracts\UpdateUserProfileRequest.cs" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="C:\Windows\System32\xcopy.exe &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\output\Journey\&quot; /y&#xD;&#xA;C:\Windows\System32\xcopy.exe &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(ProjectDir)..\..\..\output\&quot; /y" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\..\..\output\Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JourneyManagerClient", "JourneyManagerClient.csproj", "{271AA5F9-8DA7-4F3D-AD54-6E92A407A3C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5FDDEB13-B706-42F5-B951-23B8D0482CD8} = {5FDDEB13-B706-42F5-B951-23B8D0482CD8}
+		{5663D9AB-7371-4F6C-A313-05851B7A6235} = {5663D9AB-7371-4F6C-A313-05851B7A6235}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JourneyManagerContracts", "..\JourneyManagerContracts\JourneyManagerContracts.csproj", "{5FDDEB13-B706-42F5-B951-23B8D0482CD8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JourneyManagerService", "..\JourneyManagerService\JourneyManagerService.csproj", "{5663D9AB-7371-4F6C-A313-05851B7A6235}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5FDDEB13-B706-42F5-B951-23B8D0482CD8} = {5FDDEB13-B706-42F5-B951-23B8D0482CD8}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{271AA5F9-8DA7-4F3D-AD54-6E92A407A3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271AA5F9-8DA7-4F3D-AD54-6E92A407A3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271AA5F9-8DA7-4F3D-AD54-6E92A407A3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271AA5F9-8DA7-4F3D-AD54-6E92A407A3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDDEB13-B706-42F5-B951-23B8D0482CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDDEB13-B706-42F5-B951-23B8D0482CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDDEB13-B706-42F5-B951-23B8D0482CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDDEB13-B706-42F5-B951-23B8D0482CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5663D9AB-7371-4F6C-A313-05851B7A6235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5663D9AB-7371-4F6C-A313-05851B7A6235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5663D9AB-7371-4F6C-A313-05851B7A6235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5663D9AB-7371-4F6C-A313-05851B7A6235}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D840D3D-B60A-4DB6-9362-A3F5494979C7}
+	EndGlobalSection
+EndGlobal

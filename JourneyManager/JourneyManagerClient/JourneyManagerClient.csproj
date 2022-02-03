@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="C:\Windows\System32\xcopy.exe &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\..\output\Journey\&quot; /y&#xD;&#xA;C:\Windows\System32\xcopy.exe &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(ProjectDir)..\..\..\output\&quot; /y" />
+  </Target>
+  <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\..\..\output\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JourneyManagerContracts">
+      <HintPath>..\..\..\output\Journey\JourneyManagerContracts.dll</HintPath>
+    </Reference>
+    <Reference Include="JourneyManagerService">
+      <HintPath>..\..\..\output\Journey\JourneyManagerService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
